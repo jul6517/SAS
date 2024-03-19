@@ -56,15 +56,6 @@ If you have any questions or need further clarification, feel free to contact us
   - **time**: true = event, false= censor
  
 
-Do basic statistical summary on this data (5pt)
-
-Write a macro that would take in variable name and run univariate logistic regression on readmission controlling for the other variables(excluding id and tract) one at a time. (5pt)
-
-Do a ttest to compare numeric variables between treatment (2pt)
-
-Do a chi sq test to compare categorical variable(s) between treatment (2pt)
-
-Do a propensity score matching 1:1 that on age, bmi, female and comorbidity_index for treatment group (5pt)
 
 Then use the PS matched 1:1 data and repeat the above step 1-3, summarize what you find. (difference in variables between treatment group should be smaller after matching). (2pt)
 
