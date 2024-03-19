@@ -1,48 +1,60 @@
-Final SAS Lab group project
-Due: 4/9/2023 11:59 EST on canvas
+# Compared placebo to medication on health outcomes and patient characteristics by SAS <!-- omit in toc -->
 
-subtitle: “pt: 40”
+## Introduction
+This README file provides an overview of the SAS project completed by Hsiang-Ching Huang (Juliana). The project involved performing various tasks using SAS programming to analyze healthcare data.
 
-Submit only one .PDF / .HTML/ .DOC file that include the following:
+## Project Description
+The project tasks included data cleaning, statistical analysis, propensity score matching, survival analysis, and merging datasets. Each task was completed according to the provided instructions.
 
-Your group member’s names
+## File Structure
+The main project file is named sas sample.pdf. It contains all the SAS code and results for the tasks assigned.
 
-You should include each task as listed in this html and under each numbered task, include your sas code and result, it can be screenshot.
+## Instructions for Running the Code
+To run the SAS code provided in SAS, ensure that SAS software is installed on your computer. Open the file in SAS and execute each task sequentially.
 
-You will read in the study1.csv file that contains the following variables:
+## Results
+Each task in SAS is numbered, and under each numbered task, you'll find the corresponding SAS code and results.
 
-“id”
+## Conclusion
+The project yielded valuable insights into the healthcare data analyzed. Detailed findings for each task are provided in SAS.
 
-“rx”: treatment 1=placebo; 2=treatment
+## Contact Information
+If you have any questions or need further clarification, feel free to contact us at jul6517@gmail.com.
 
-“age”
+# Dataset
 
-“bmi”
+## Study1 Dataset
 
-“female”
-
-“readmission” 1= Readmission yes; 0=No 90 day readmission
-
-“comorbidity_index”: index 4-5: severe; 3: moderate; 1-2: light
-
-“charges”: total hospital charge
-
-“los” : length of stay
-
-“tract”: census tract
-
-survival.df
-
-"id"
-
-"time" : time of follow up(death of censor)
-
-"status": true = event, false= censor
-note: steps are sequential
-
-Do the following:
-
-Round up age to integer (pt 2)
+- **Source**: data contains basic information on patients information in clinical trials (placebo vs medication) 
+- **Description**: This dataset contains information about patients enrolled in a clinical study.
+- **Format**: CSV (Comma-Separated Values)
+- **Preprocessing Steps**: 
+  - Removed duplicates and invalid records.
+  - Imputed missing values using mean imputation for numerical variables and mode imputation for categorical variables.
+  - Round up age to integer
+- **Variables**:
+  - **id**: Patient ID (Integer)
+  - **rx**: Treatment received (Categorical: 1=placebo, 2=treatment)
+  - **age**: Age of the patient (Numeric: Years)
+  - **bmi**: Body Mass Index (Numeric: kg/m^2)
+  - **female**: Gender of the patient (Binary: 0=male, 1=female)
+  - **readmission**: 90-day readmission status (Binary: 0=No, 1=Yes)
+  - **comorbidity_index**: Severity of comorbidity (Categorical: 1-2=light, 3=moderate, 4-5=severe)
+  - **charges**: Total hospital charges (Numeric: USD)
+  - **los**: Length of hospital stay (Numeric: Days)
+  - **tract**: Census tract (String: Census tract identifier)
+  - 
+## Survival Dataset
+- **Source**: data contains basic information on patients' outcomes in clinical trials (placebo vs medication) 
+- **Description**: This dataset contains information about patients' outcomes enrolled in a clinical study.
+- **Format**: CSV (Comma-Separated Values)
+- **Preprocessing Steps**: 
+  - Removed duplicates and invalid records.
+  - Imputed missing values using mean imputation for numerical variables and mode imputation for categorical variables.
+- **Variables**:
+  - **id**: Patient ID (Integer)
+  - **time**: true = event, false= censor
+ 
 
 Do basic statistical summary on this data (5pt)
 
