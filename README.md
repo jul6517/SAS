@@ -55,33 +55,19 @@ If you have any questions or need further clarification, feel free to contact us
   - **id**: Patient ID (Integer)
   - **time**: true = event, false= censor
  
+## Social_characteristicsDataset
+- **Source**: data contains social characteristics information on patients in clinical trials (placebo vs medication) 
+- **Description**: This dataset contains information about patients enrolled in a clinical study.
+- **Format**: CSV (Comma-Separated Values)
+- **Preprocessing Steps**: 
+  - Removed first row
+  - Substring GEO_ID to keep only characters after US (for example: 1400000US42001030101 – > 42001030101) and keep that to a new column called “tract”
+  - Clean up name column separate them into columns by “,”
+- **Variables**:
+  - **id**: Patient ID (Integer)
+  - **time**: true = event, false= censor
+  - 
 
-
-Then use the PS matched 1:1 data and repeat the above step 1-3, summarize what you find. (difference in variables between treatment group should be smaller after matching). (2pt)
-
-Merge the PS matched dataset from step 5 with survival.df on id, name the merged file “merged_1” (2pt)
-
-Merge the PS matched dataset from step 5 with survival.df on id, and subset to only include comorbidity_index in severe or moderate categories, name the merged file “merged_2”(2pt)
-
-For merged_1 file and For merged_2 file, do the following steps:
-
-Run a proc lifetest and populate the following curves (3pt)
-
-KM curve for the whole group
-
-KM curves between gender
-
-KM curve between treatment
-
-Run a cox ph model on time to death (time variable) controlling for age, female, treatment (3pt)
-
-Read in the social_characteristics.csv file, do the following data cleaning steps (7pt)
-
-Remove first row
-
-Substring GEO_ID to keep only characters after US (for example: 1400000US42001030101 – > 42001030101) and keep that to a new column called “tract”
-
-Clean up name column separate them into columns by “,”
 
 We will subset this social_characteristics data, we will keep GEO_ID and variables in the column “variable” from data_dictionary_include.csv that start with prefix”DP02” and include column =“x”
 
