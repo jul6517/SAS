@@ -66,7 +66,8 @@ If you have any questions or need further clarification, feel free to contact us
 - **Variables**:
   - **GEO_ID**: Geographical ID (Integer)
   - **Name**: the name of the locaion
-  - 
+ 
+  
 ## data_dictionary_include Dataset
 - **Source**: data contains social characteristics information on patients in clinical trials (placebo vs medication) 
 - **Description**: This dataset contains information about patients enrolled in a clinical study.
@@ -75,12 +76,5 @@ If you have any questions or need further clarification, feel free to contact us
   - Removed first row
   - Substring GEO_ID to keep only characters after US (for example: 1400000US42001030101 – > 42001030101) and keep that to a new column called “tract”
   - Clean up name column separate them into columns by “,”
-- **Variables**:
-- 
-We will subset this social_characteristics data, we will keep GEO_ID and variables in the column “variable” from data_dictionary_include.csv that start with prefix”DP02” and include column =“x”
-
-Use the tract variable to merge the subsetted social_characteristics file with the merged_1 file.
-
-Run a linear regression on los controlling for all the DP02 variables, rx, age, female, charge
-
-Use proc sql to summary by tract, what’s the mean age, mean of each DP variables, sum of all the DP variables, and order by sum of all the DP variables and show only the top 10 tract.
+- **Variables**: 
+  - **Variable**: SELECTED SOCIAL CHARACTERISTICS IN THE UNITED STATES
